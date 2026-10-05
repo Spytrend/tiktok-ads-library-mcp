@@ -1,6 +1,6 @@
 {
   "name": "@spytrend/tiktok-ads-library-mcp",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "MCP server adapter for TikTok ad research: search TikTok ads, open them, find the operators behind them — from your AI assistant. Hosted by Spytrend, Pro plan.",
   "type": "module",
   "bin": {

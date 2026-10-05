@@ -18,6 +18,9 @@ const tiktokAdvertiserFilters = [
 
 // Pixel and IP lookups are internal signals: never published, a call that sets one is refused.
 const internalLookups = ["pixel_id", "resolved_ip"];
+// Advertiser rows and cards carry the internal pixel and IP inventories (lists, their counts and
+// the pixel links between accounts): dropped from every result.
+const internalInventories = ["pixel_ids*", "resolved_ips*", "tt_pixel_edges"];
 
 export const adapterConfig = {
   rejectProperties: internalLookups,
@@ -73,6 +76,7 @@ export const adapterConfig = {
     search_tiktok_advertisers: {
       remoteName: "search_webmasters",
       ...pinTikTok,
+      dropFields: internalInventories,
       allowProperties: tiktokAdvertiserFilters,
       aliases: { categories: "ai_category", ai_categories: "ai_category" },
       properties: {
@@ -88,6 +92,7 @@ export const adapterConfig = {
     get_tiktok_advertiser: {
       remoteName: "get_webmaster",
       ...pinTikTok,
+      dropFields: internalInventories,
       // The TikTok card is not windowed: the server takes only the id for TikTok.
       allowProperties: ["id"],
       properties: { id: "the TikTok advertiser id from `search_tiktok_advertisers`" },

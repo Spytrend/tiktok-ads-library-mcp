@@ -93,6 +93,9 @@ download is not available for TikTok ids. Details:
   does not bypass any platform access control.
 - TikTok is a trademark of TikTok Ltd. This project is not affiliated with, endorsed by or
   sponsored by TikTok or ByteDance.
+- Results are the hosted server's answers in this adapter's names: tool and parameter names in errors
+  and parameter notes are this adapter's, and fields the hosted server keeps for its own use are
+  left out. What advertisers published (ad copy, names, links) is passed on as is.
 - For the full server with Meta coverage, all 22 tools and six ready-made research workflows,
   see the canonical repository: [Spytrend/spytrend-mcp](https://github.com/Spytrend/spytrend-mcp).
 
